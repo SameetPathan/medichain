@@ -6,7 +6,7 @@ import '../Typewriter.css';
 function ForceLogin() {
 
   const [text, setText] = useState("");
-  const messages = ["Welcome To Jarvis Systems", "Explore Our Blockchain Services", "A Secure Blockchain HealthChain"];
+  const messages = ["Welcome To Medi-chain"];
 
   useEffect(() => {
     let i = 0;

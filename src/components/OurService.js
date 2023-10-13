@@ -7,8 +7,8 @@ function OurService(props) {
 		<div className="container">
 				<div className=" text-center">
 					<div className="section-title">	
-						<h3><span className="orange-text">Welcome{props.to}</span>, {props.text}</h3>
-						<p>Just A Rather Very Intelligent System In HealthChain  </p>
+						<h3><span className="orange-text">Welcome{props.to}</span>, Medi-chain</h3>
+						<p> </p>
 					</div>
 			</div>
 		</div>
