@@ -1,12 +1,12 @@
 import {React,useState} from 'react'
-import Loader from './Loader'
+
 
 function AlertComponent() {
 
   return (
    
       <div className='text-center container'>
-       <Loader></Loader>
+       
 
        
 

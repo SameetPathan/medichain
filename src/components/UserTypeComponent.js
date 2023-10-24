@@ -1,100 +1,77 @@
-import React from 'react'
+import React from 'react';
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link
-  } from 'react-router-dom';
-import Loader from './Loader';
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+
 import OurService from './OurService';
 
 function UserTypeComponent() {
   return (
     <>
-    <Loader></Loader>
-    {/*<OurService to={" To"} text={"Jarvis Systems"}></OurService>*/}
-  
- <div className='d-lg-flex align-items-lg-center'>
       
-    <div className="form-bg">
-        <div className="form-container ">
-            <img
-            src={process.env.PUBLIC_URL + "/doctor.jpg"}
-            height="180px"
-            className="card-img-top shadow rounded mb-2"
-            alt="..."
-            />
-            
-            <form className="form-horizontal">
-                <Link to="" className="btn btn-default">
-                Doctor Dashboard 
-                </Link>
 
-            </form>
-            </div>
-      </div>
+      <div className='container'>
+        <div className='row justify-content-center'>
 
-       
-
-    <div className="form-bg">
-        <div className="form-container ">
-            <img
-            src={process.env.PUBLIC_URL + "/patient.jpg"}
-            height="180px"
-            className="card-img-top shadow rounded mb-2"
-            alt="..."
-            />
-           
+          {/* Doctor */}
+          <div className='col-lg-3'>
+            <div className='card mb-4'>
+              <div className="card-body">
                 <form className="form-horizontal">
-                <Link to="" className="btn btn-default">
-                        Patient Dashboard 
-                </Link>
-                </form> 
+                  <Link to="/doctorhome" className="btn btn-primary btn-block">
+                    Doctor Dashboard
+                  </Link>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          {/* Patient */}
+          <div className='col-lg-3'>
+            <div className='card mb-4'>
+              <div className="card-body">
+                <form className="form-horizontal">
+                  <Link to="" className="btn btn-primary btn-block">
+                    Patient Dashboard
+                  </Link>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          {/* Medical */}
+          <div className='col-lg-3'>
+            <div className='card mb-4'>
+              <div className="card-body">
+                <form className="form-horizontal">
+                  <Link to="" className="btn btn-primary btn-block">
+                    Medical Dashboard
+                  </Link>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          {/* Pharma */}
+          <div className='col-lg-3'>
+            <div className='card mb-4'>
+              <div className="card-body">
+                <form className="form-horizontal">
+                  <Link to="" className="btn btn-primary btn-block">
+                    Pharma Dashboard
+                  </Link>
+                </form>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-
-    <div className="form-bg">
-        <div className="form-container "> 
-            <img
-            src={process.env.PUBLIC_URL + "/medical.jpg"}
-            height="180px"
-            className="card-img-top shadow rounded mb-2"
-            alt="..."
-                />
-            
-            <form className="form-horizontal">
-            <Link to="" className="btn btn-default">
-                        Medical Dashboard 
-            </Link>
-
-            </form>
-        </div>
-    </div>
-
-    <div className="form-bg">
-        <div className="form-container ">
-
-            <img
-            src={process.env.PUBLIC_URL + "/pharma.jpg"}
-            height="180px"
-            className="card-img-top shadow rounded mb-2"
-            alt="..."
-            />
-         
-            <form className="form-horizontal">
-            <Link to="" className="btn btn-default">
-                        Pharma Dashboard 
-            </Link>
-
-            </form>
-        </div>
-    </div>
-
-    </div>
-
     </>
   );
 }
 
-export default UserTypeComponent
+export default UserTypeComponent;

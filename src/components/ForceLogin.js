@@ -1,6 +1,6 @@
 import {React,useState,useEffect} from 'react'
 import MatrixAnimation from './background'
-import Loader from './Loader'
+
 import '../Typewriter.css';
 
 function ForceLogin() {
@@ -20,11 +20,11 @@ function ForceLogin() {
 
   return (
   <>
-  <Loader></Loader>
+  
     <div className="home-page">
       <img 
       className='bg-img'
-      src={process.env.PUBLIC_URL + "/bg2.jpg"} 
+      src={process.env.PUBLIC_URL + "/bg4.png"} 
       alt="Background" 
       style={{ 
           width: '100%', 
@@ -32,9 +32,9 @@ function ForceLogin() {
           objectFit: 'cover' 
         }} 
       />
-       <div className="typewriter-text my-div">
+      {/* <div className="typewriter-text my-div">
         {text}
-      </div>
+      </div> */}
     </div>
         
   </>

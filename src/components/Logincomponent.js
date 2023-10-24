@@ -1,6 +1,6 @@
 import { useEffect,React } from 'react';
 import { ethers } from 'ethers';
-import Loader from './Loader';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -40,7 +40,7 @@ function Logincomponent(props) {
       props.setCurrentBalanace("");
      
 
-      <Loader></Loader>
+      
 		  } catch (err) {
 			console.log(err);
 		  }
@@ -109,8 +109,9 @@ function Logincomponent(props) {
     }, [])
   return (
     <>
-    <Loader></Loader>
+    
     {props.currentAccount ?  <div className="form-inline">
+    <Link to="/admin">   <button className="btn btn-outline-danger my-2 my-sm-0 ml-2" >Admin</button></Link> 
     <Link to="/">   <button className="btn btn-outline-danger my-2 my-sm-0 ml-2" onClick={logout} >Logout</button></Link> 
     </div>
     :
