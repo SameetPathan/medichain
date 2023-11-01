@@ -9,7 +9,7 @@ import { ethers } from 'ethers';
 
 import OurService from './OurService';
 
-const DoctorContractAddress="0xA08169A7267f47422e9aFd5deD66B2774342e252";
+const DoctorContractAddress="0xF0299d3E26012AAaEEd5E380cEe47d58fE771b1A";
 const abiDoctorContract=[
 	{
 		"inputs": [
@@ -60,6 +60,24 @@ const abiDoctorContract=[
 			}
 		],
 		"name": "addDoctor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "Doctorid",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "status",
+				"type": "uint256"
+			}
+		],
+		"name": "updateDoctor",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -209,24 +227,6 @@ const abiDoctorContract=[
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "Doctorid",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "status",
-				"type": "uint256"
-			}
-		],
-		"name": "updateDoctor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	}
 ];
 
@@ -303,7 +303,7 @@ function DoctorHome(props) {
 			<span class="badge badge-success">Verified</span>
               <div className="card-body">
                 <form className="form-horizontal">
-                  <Link to="/addpatient" className="btn btn-primary btn-block">
+                  <Link to="" className="btn btn-primary btn-block">
 				  Add Patient
                   </Link>
                 </form>
@@ -316,7 +316,7 @@ function DoctorHome(props) {
 			<span class="badge badge-success">Verified</span>
               <div className="card-body">
                 <form className="form-horizontal">
-                  <Link to="/viewpatient" className="btn btn-primary btn-block">
+                  <Link to="" className="btn btn-primary btn-block">
 				  View Patient
                   </Link>
                 </form>

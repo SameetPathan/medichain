@@ -92,6 +92,7 @@ function Logincomponent(props) {
           const signer = provider.getSigner();
           const BalanceContract= new ethers.Contract(BalanceContractAddress, BalanceContractABI, signer);
           const balance = await BalanceContract.getBalance(accounts[0]);
+
           props.setCurrentBalanace(String(balance));
 
           //console.log("Found an account! Address: ", accounts[0]);
@@ -110,8 +111,8 @@ function Logincomponent(props) {
   return (
     <>
     
-    {props.currentAccount ?  <div className="form-inline">
-    <Link to="/admin">   <button className="btn btn-outline-danger my-2 my-sm-0 ml-2" >Admin</button></Link> 
+    {props.currentAccount  ?  <div className="form-inline">
+    {props.currentAccount=="0xd4f9200D0f3405bc28A755Aef91B6aFB1823b3f7"  ?<Link to="/admin">   <button className="btn btn-outline-danger my-2 my-sm-0 ml-2" >Admin</button></Link>:""} 
     <Link to="/">   <button className="btn btn-outline-danger my-2 my-sm-0 ml-2" onClick={logout} >Logout</button></Link> 
     </div>
     :

@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import { useState } from 'react';
 
 
-const DoctorContractAddress="0xA08169A7267f47422e9aFd5deD66B2774342e252";
+const DoctorContractAddress="0xF0299d3E26012AAaEEd5E380cEe47d58fE771b1A";
 const abiDoctorContract=[
 	{
 		"inputs": [
@@ -55,6 +55,24 @@ const abiDoctorContract=[
 			}
 		],
 		"name": "addDoctor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "Doctorid",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "status",
+				"type": "uint256"
+			}
+		],
+		"name": "updateDoctor",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -204,24 +222,6 @@ const abiDoctorContract=[
 		],
 		"stateMutability": "view",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "Doctorid",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "status",
-				"type": "uint256"
-			}
-		],
-		"name": "updateDoctor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	}
 ];
 
@@ -241,6 +241,8 @@ function AddDoctor(props) {
 
   const clear=()=>{
     document.getElementById("myForm").reset();
+	const form = document.getElementById('myForm');
+	form.reset();
 }
 
     const savedata = async () => {
@@ -295,36 +297,21 @@ function AddDoctor(props) {
             console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${Txn2.hash}`);
             
             //balance capture
-            
-            var elem = document.getElementById("alertid");
-		  elem.classList.add("show");
-		  setTimeout(function(){
-			elem.classList.remove("show");
-		  }, 3000);
-
+    
           //
           clear();
-          
+          alert("Added Success , Please Wait for Verification")
           //
            
 
           } else {
-            console.log("Ethereum object does not exist");
-            var elem = document.getElementById("alertidf");
-            elem.classList.add("show");
-            setTimeout(function(){
-              elem.classList.remove("show");
-            }, 3000);
-    
+            alert("Ethereum object does not exist");
+        
           }
     
         } catch (err) {
-          console.log(err);
-          var elem = document.getElementById("alertidf");
-		elem.classList.add("show");
-		setTimeout(function(){
-			elem.classList.remove("show");
-		  }, 3000);
+          alert(err);
+        
     
         }
       }
